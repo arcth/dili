@@ -28,10 +28,10 @@
         },
         bind:function(){
             var that = this;
-            that.dateDom.yearInline.addEventListener('click',function(e){
+            that.dateDom.yearInline.addEventListener('click',function(e){ //标题上的年份
                 that.YearContainerRender(that);
             },false);
-            that.dateDom.monthInline.addEventListener('click',function(e){
+            that.dateDom.monthInline.addEventListener('click',function(e){ //标题上的月份
                 that.MonthContainerRender(e,that);
             },false);
             that.dateDom.preAll.addEventListener('click',function(e){ //前一年(年翻页)
@@ -46,7 +46,7 @@
             that.dateDom.nextOne.addEventListener('click',function(e){ //下一个月(月翻页)
                 that.nextMonthActive(e,that);
             },false);
-            that.dateDom.yearCells.addEventListener('click',function(e){
+            that.dateDom.yearCells.addEventListener('click',function(e){ //年点击
                 var isTarget = that.hasClass(e,'year-choose');
                 if(isTarget){
                     var thisYear = e.target.textContent;
@@ -55,7 +55,7 @@
                     that.MonthContainerRender(e,that,thisYear);
                 }
             },false);
-            that.dateDom.monthCells.addEventListener('click',function(e){
+            that.dateDom.monthCells.addEventListener('click',function(e){ //月点击
                var isTarget = that.hasClass(e,'month-choose');
                if(isTarget){
                    var month = e.target.textContent;
@@ -65,7 +65,7 @@
                    that.dateContainerRender(that.dateData.year,that.dateData.month,that.dateData.day);
                }
             },false);
-            that.dateDom.dateCells.addEventListener('click',function(e){
+            that.dateDom.dateCells.addEventListener('click',function(e){ //日点击
                 if(e.target.className === 'enabled'){
                     var day = e.target.textContent;
                     that.dateData.day = day;
@@ -83,7 +83,7 @@
                 }
             }
         },
-        weeks:{
+        weeks:{ //暂未使用
           Sun:['日','一','二','三','四','五','六'],
           Sun_full:['周日','周一','周二','周三','周四','周五','周六']
         },
@@ -177,9 +177,9 @@
         },
         MonthContainerRender:function(e,that){ //月dom装载
             var html = '';
-            var thisMonth = new Date().getMonth();
+            var thisMonth = that.dateData.month;
             for(var i = 0; i<12; i++){
-                html += '<span class="month-choose'+(i == thisMonth?' thisActive':'')+'">'+(i+1)+'</span>';
+                html += '<span class="month-choose'+(i+1 == thisMonth?' thisActive':'')+'">'+(i+1)+'</span>';
             }
             that.dateDom.monthInline.style.display = 'none';
             that.dateDom.dateContent.style.display = 'none';
