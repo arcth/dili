@@ -4,18 +4,18 @@
         this.init();
     }
     dlDate.prototype = {
-        dateData:{
+        dateData:{ //存储年月日时分秒
             year:'',
             month:'',
             day:'',
             hour:'',
             minute:'',
             second:''
-        }, //存储年月日是分秒
-        dateDom:{
+        },
+        dateDom:{ //存储元素
 
         },
-        init:function(){ //初始化参数设置
+        init:function(){ //初始化参数设置，暂未根据参数进行处理
            this.set = {
                type : this.set.type || 'yyyy-mm-dd',
                minDate : this.set.minDate || '',
@@ -34,20 +34,21 @@
             that.dateDom.monthInline.addEventListener('click',function(e){
                 that.MonthContainerRender(e,that);
             },false);
-            that.elemt.querySelector('.pre-all').addEventListener('click',function(e){ //前一年(年翻页)
+            that.dateDom.preAll.addEventListener('click',function(e){ //前一年(年翻页)
                 that.preYearActive(e,that);
             },false);
-            that.elemt.querySelector('.next-all').addEventListener('click',function(e){ //下一年(年翻页)
+            that.dateDom.nextAll.addEventListener('click',function(e){ //下一年(年翻页)
                 that.nextYearActive(e,that);
             },false);
-            that.elemt.querySelector('.pre-one').addEventListener('click',function(e){ //前一个月(月翻页)
+            that.dateDom.preOne.addEventListener('click',function(e){ //前一个月(月翻页)
                 that.preMonthActive(e,that);
             },false);
-            that.elemt.querySelector('.next-one').addEventListener('click',function(e){ //下一个月(月翻页)
+            that.dateDom.nextOne.addEventListener('click',function(e){ //下一个月(月翻页)
                 that.nextMonthActive(e,that);
             },false);
-            that.elemt.querySelector('.year-pick-cells').addEventListener('click',function(e){
-                if(e.target.className === 'year-choose'){
+            that.dateDom.yearCells.addEventListener('click',function(e){
+                var isTarget = that.hasClass(e,'year-choose');
+                if(isTarget){
                     var thisYear = e.target.textContent;
                     that.elemt.querySelector('.year-show').innerHTML = thisYear;
                     that.dateData.year = parseInt(thisYear);
@@ -64,7 +65,7 @@
                    that.dateContainerRender(that.dateData.year,that.dateData.month,that.dateData.day);
                }
             },false);
-            that.elemt.querySelector('.date-pick-cells').addEventListener('click',function(e){
+            that.dateDom.dateCells.addEventListener('click',function(e){
                 if(e.target.className === 'enabled'){
                     var day = e.target.textContent;
                     that.dateData.day = day;
