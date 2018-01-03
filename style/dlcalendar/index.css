@@ -47,7 +47,7 @@
     opacity: 0;
   }
 }
-.dl-Calender {
+.dl-Calendar {
   position: absolute;
   width: auto;
   border-radius: 3px;
@@ -57,53 +57,53 @@
   color: #455a70;
   user-select: none;
 }
-.dl-Calender .topDate {
+.dl-Calendar .topDate {
   height: 32px;
   line-height: 32px;
   text-align: center;
   padding: 0 6px;
   border-bottom: 1px solid #f3f3f3;
 }
-.dl-Calender .topDate .pre-one,
-.dl-Calender .topDate .pre-all {
+.dl-Calendar .topDate .pre-one,
+.dl-Calendar .topDate .pre-all {
   float: left;
   padding: 0 3px;
   cursor: pointer;
   font-size: 12px;
   transition: all linear 0.2s;
 }
-.dl-Calender .topDate .pre-one:hover,
-.dl-Calender .topDate .pre-all:hover {
+.dl-Calendar .topDate .pre-one:hover,
+.dl-Calendar .topDate .pre-all:hover {
   color: #3c97ed;
 }
-.dl-Calender .topDate .next-one,
-.dl-Calender .topDate .next-all {
+.dl-Calendar .topDate .next-one,
+.dl-Calendar .topDate .next-all {
   float: right;
   padding: 0 3px;
   cursor: pointer;
   font-size: 12px;
   transition: all linear 0.2s;
 }
-.dl-Calender .topDate .next-one:hover,
-.dl-Calender .topDate .next-all:hover {
+.dl-Calendar .topDate .next-one:hover,
+.dl-Calendar .topDate .next-all:hover {
   color: #3c97ed;
 }
-.dl-Calender .topDate .year-inline,
-.dl-Calender .topDate .month-inline {
+.dl-Calendar .topDate .year-inline,
+.dl-Calendar .topDate .month-inline {
   padding: 0 6px;
   font-size: 12px;
   cursor: pointer;
   transition: all linear 0.2s;
 }
-.dl-Calender .topDate .year-inline:hover,
-.dl-Calender .topDate .month-inline:hover {
+.dl-Calendar .topDate .year-inline:hover,
+.dl-Calendar .topDate .month-inline:hover {
   color: #3c97ed;
 }
-.dl-Calender .dateContainer .date-content {
+.dl-Calendar .dateContainer .date-content {
   margin: 10px;
   width: 196px;
 }
-.dl-Calender .dateContainer .date-content .week-top-Head span {
+.dl-Calendar .dateContainer .date-content .week-top-Head span {
   display: inline-block;
   width: 28px;
   height: 28px;
@@ -112,7 +112,7 @@
   font-size: 12px;
   color: #cdd1d6;
 }
-.dl-Calender .dateContainer .date-content .date-pick-cells span {
+.dl-Calendar .dateContainer .date-content .date-pick-cells span {
   display: inline-block;
   width: 28px;
   height: 28px;
@@ -123,24 +123,24 @@
   transition: all linear 0.2s;
   border-radius: 4px;
 }
-.dl-Calender .dateContainer .date-content .date-pick-cells span.enabled:hover {
+.dl-Calendar .dateContainer .date-content .date-pick-cells span.enabled:hover {
   background-color: #eff8ff;
 }
-.dl-Calender .dateContainer .date-content .date-pick-cells span.disabled {
+.dl-Calendar .dateContainer .date-content .date-pick-cells span.disabled {
   cursor: not-allowed;
   color: #cdd1d6;
 }
-.dl-Calender .dateContainer .date-content .date-pick-cells span.nowDay {
+.dl-Calendar .dateContainer .date-content .date-pick-cells span.nowDay {
   color: #3c97ed;
 }
-.dl-Calender .dateContainer .year-pick-cells,
-.dl-Calender .dateContainer .month-pick-cells {
+.dl-Calendar .dateContainer .year-pick-cells,
+.dl-Calendar .dateContainer .month-pick-cells {
   margin: 10px;
   width: 196px;
   font-size: 12px;
 }
-.dl-Calender .dateContainer .year-pick-cells span,
-.dl-Calender .dateContainer .month-pick-cells span {
+.dl-Calendar .dateContainer .year-pick-cells span,
+.dl-Calendar .dateContainer .month-pick-cells span {
   display: inline-block;
   width: 40px;
   height: 28px;
@@ -150,12 +150,12 @@
   text-align: center;
   cursor: pointer;
 }
-.dl-Calender .dateContainer .year-pick-cells span:hover,
-.dl-Calender .dateContainer .month-pick-cells span:hover {
+.dl-Calendar .dateContainer .year-pick-cells span:hover,
+.dl-Calendar .dateContainer .month-pick-cells span:hover {
   background-color: #eff8ff;
 }
-.dl-Calender .dateContainer .year-pick-cells span.thisActive,
-.dl-Calender .dateContainer .month-pick-cells span.thisActive {
+.dl-Calendar .dateContainer .year-pick-cells span.thisActive,
+.dl-Calendar .dateContainer .month-pick-cells span.thisActive {
   background-color: #3c97ed;
   color: #fff;
 }

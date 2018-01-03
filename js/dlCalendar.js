@@ -97,7 +97,7 @@
             that.dateData.month = showDate.getMonth() + 1;
             that.dateData.day = showDate.getDate();
             that.elemt = document.createElement('div');
-            that.elemt.className = 'dl-Calender';
+            that.elemt.className = 'dl-Calendar';
             var html = '';
             html +=     '<div class="topDate">';
             html +=         '<span class="pre-all">&lt;&lt;</span><span class="pre-one">&lt;</span>';
