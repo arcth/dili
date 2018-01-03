@@ -1,1 +1,0 @@
-import {hasClass} from './index';
