@@ -1,5 +1,5 @@
 // ~function(){
-    function dlDate(ele,settings){ //ele 唯一标示id,
+    function dlDate(ele,settings){ //ele 唯一标示id,后期添加class(暂实现了功能，未绑定到dom上)
         this.set  = Object.assign({},settings);
         this.init();
     }
